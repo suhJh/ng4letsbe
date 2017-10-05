@@ -1,0 +1,21 @@
+<form [formGroup]="formModel" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+
+    </div>
+    <div class="form-group">
+        <label for="title">제목</label>
+        <input id="title" type="text" placeholder="SR의 제목을 입력해주세요." class="form-control" formControlName="title">
+    </div>
+    <div class="form-group">
+        <label for="category">분류</label>
+        <select id="category" class="form-control" formControlName="category" (change)="onChangeCategory($event)">
+          <option value="-1">선택</option>
+          <option *ngFor="let c of categoriesLarge | async" [value]="c.value">{{c.name}}</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="content">내용</label>
+        <textarea id="content" class="form-control" rows="4" formControlName="content"></textarea>
+    </div>
+    <button type="submit" class="btn btn-default">등록</button>
+</form>

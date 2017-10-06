@@ -1,0 +1,13 @@
+.full-height {
+    min-height: 100vh;
+}
+
+.c-md-sidenav {
+    max-width: 200px;
+    border-right: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.scrolling-content {
+    overflow: auto;
+    height: 100%;
+}

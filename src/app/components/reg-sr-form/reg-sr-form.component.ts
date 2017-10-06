@@ -49,9 +49,4 @@ export class RegSrFormComponent implements OnInit {
     alert('입력되었습니다.');
     this.router.navigate(['/srDetail', srNo]);
   }
-
-  onChangeCategory({ target }): void {
-    console.log(target.value);
-  }
-
 }

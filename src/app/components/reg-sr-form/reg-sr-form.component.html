@@ -1,7 +1,20 @@
-<form [formGroup]="formModel" (ngSubmit)="onSubmit()">
-    <div class="form-group">
+<div class="container">
+    <form [formGroup]="formModel" (ngSubmit)="onSubmit()" class="full-width">
+        <md-form-field>
+            <input mdInput placeholder="SR의 제목을 입력해주십시오." type="text" formControlName="title">
+        </md-form-field>
+        <md-select placeholder="분류" formControlName="category">
+            <md-option *ngFor="let c of categoriesLarge | async" [value]="c.value">{{ c.name }}</md-option>
+        </md-select>
+        <md-form-field>
+            <textarea mdInput placeholder="내용입력" formControlName="content" rows="5"></textarea>
+        </md-form-field>
+        <button type="submit" md-raised-button color="primary">저장</button>
+    </form>
+</div>
 
-    </div>
+<!--
+<form [formGroup]="formModel" (ngSubmit)="onSubmit()">
     <div class="form-group">
         <label for="title">제목</label>
         <input id="title" type="text" placeholder="SR의 제목을 입력해주세요." class="form-control" formControlName="title">
@@ -19,3 +32,4 @@
     </div>
     <button type="submit" class="btn btn-default">등록</button>
 </form>
+-->

@@ -1,0 +1,24 @@
+<nav class="nav flex-column sidebar">
+    <a class="nav-link text-light h4 nav-header bg-secondary" href="#sr-manage-div" data-toggle="collapse" aria-expanded="true">SR관리</a>
+    <div class="collape.show" id="sr-manage-div">
+        <a class="nav-link text-dark h6" data-toggle="collapse" href="#sr-reg-div">SR등록</a>
+        <div class="collapse" id="sr-reg-div" [hidden]="!(isLogin | async)">
+            <a class="nav-link text-dark h7 dep3" [routerLink]="['/regSrForm', 'newService']" routerLinkActive="active">신규서비스개발</a>
+            <a class="nav-link text-dark h7 dep3" [routerLink]="['/regSrForm', 'matainance']" routerLinkActive="active">유지보수</a>
+            <a class="nav-link text-dark h7 dep3" [routerLink]="['/regSrForm', 'urgent']" routerLinkActive="active">긴급</a>
+        </div>
+        <a class="nav-link text-dark h6" [routerLink]="['/mySr']" routerLinkActive="active">나의 SR</a>
+        <a class="nav-link text-dark h6" [routerLink]="['/manageSr']" routerLinkActive="active">SR관리</a>
+    </div>
+    <a class="nav-link text-light h4 nav-header bg-secondary" href="#">변경관리</a>
+    <div>
+        <a class="nav-link text-dark h6" href="#">SR 관리목록</a>
+        <a class="nav-link text-dark h6" href="#">COST 산정목록</a>
+        <a class="nav-link text-dark h6" href="#">SUBSR 관리목록</a>
+        <a class="nav-link text-dark h6" href="#">테스트 관리목록</a>
+        <a class="nav-link text-dark h6" href="#">테스트 수행목록</a>
+    </div>
+    <div [hidden]="!(isChrpe | async)">
+        <a class="nav-link text-dark h6" href="#">테스트 수행목록</a>
+    </div>
+</nav>

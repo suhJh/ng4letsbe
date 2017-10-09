@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SrListComponent } from './sr-list.component';
+import { NavTopComponent } from './nav-top.component';
 
-describe('SrListComponent', () => {
-  let component: SrListComponent;
-  let fixture: ComponentFixture<SrListComponent>;
+describe('NavTopComponent', () => {
+  let component: NavTopComponent;
+  let fixture: ComponentFixture<NavTopComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SrListComponent ]
+      declarations: [ NavTopComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SrListComponent);
+    fixture = TestBed.createComponent(NavTopComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

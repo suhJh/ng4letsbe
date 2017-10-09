@@ -1,35 +1,3 @@
-<div class="container">
-    <form [formGroup]="formModel" (ngSubmit)="onSubmit()" class="full-width">
-        <md-form-field>
-            <input mdInput placeholder="SR의 제목을 입력해주십시오." type="text" formControlName="title">
-        </md-form-field>
-        <md-select placeholder="분류" formControlName="category">
-            <md-option *ngFor="let c of categoriesLarge | async" [value]="c.value">{{ c.name }}</md-option>
-        </md-select>
-        <md-form-field>
-            <textarea mdInput placeholder="내용입력" formControlName="content" rows="5"></textarea>
-        </md-form-field>
-        <button type="submit" md-raised-button color="primary">저장</button>
-    </form>
-</div>
-
-<!--
-<form [formGroup]="formModel" (ngSubmit)="onSubmit()">
-    <div class="form-group">
-        <label for="title">제목</label>
-        <input id="title" type="text" placeholder="SR의 제목을 입력해주세요." class="form-control" formControlName="title">
-    </div>
-    <div class="form-group">
-        <label for="category">분류</label>
-        <select id="category" class="form-control" formControlName="category" (change)="onChangeCategory($event)">
-          <option value="-1">선택</option>
-          <option *ngFor="let c of categoriesLarge | async" [value]="c.value">{{c.name}}</option>
-        </select>
-    </div>
-    <div class="form-group">
-        <label for="content">내용</label>
-        <textarea id="content" class="form-control" rows="4" formControlName="content"></textarea>
-    </div>
-    <button type="submit" class="btn btn-default">등록</button>
-</form>
--->
+<p>
+  reg-sr-form works!
+</p>

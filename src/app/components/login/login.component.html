@@ -1,0 +1,15 @@
+<form #frm [formGroup]="formModel" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="exampleInputEmail1">사번</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="사번" formControlName="sabun">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="비밀번호" formControlName="password">
+    </div>
+    <button type="submit" class="btn btn-primary">로그인</button>
+</form>
+
+<ul>
+    <li *ngFor="let member of memberList"><a (click)="onClickSabun(member.sabun, 1234)">{{ member.sabun }}: {{ member.name }}</a></li>
+</ul>

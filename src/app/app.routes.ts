@@ -1,17 +1,17 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './components/home/home.component';
-import { RegSrFormComponent } from './components/reg-sr-form/reg-sr-form.component';
-import { SrListComponent } from './components/sr-list/sr-list.component';
-import { SubsrListComponent } from './components/subsr-list/subsr-list.component';
-import { SrDetailComponent } from './components/sr-detail/sr-detail.component'
 
+import { LoginComponent } from './components/login/login.component';
+import { HomeComponent } from './components/home/home.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { RegSrFormComponent } from './components/reg-sr-form/reg-sr-form.component';
+
+import { LoginGuard } from './app.guards';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
-    { path: 'regSrForm', component: RegSrFormComponent },
-    { path: 'srList', component: SrListComponent },
-    { path: 'subsrList', component: SubsrListComponent },
-    { path: 'srDetail/:srNo', component: SrDetailComponent }
+    { path: 'regSrForm/:srTpSeq', component: RegSrFormComponent, canActivate: [LoginGuard] },
+    { path: 'login', component: LoginComponent },
+    { path: '**', component: PageNotFoundComponent }
 ];
 
 

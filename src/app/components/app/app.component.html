@@ -1,21 +1,12 @@
-<div>
-    <md-toolbar color="primary">
-        <span>Meritz ITSM</span>
-    </md-toolbar>
-    <md-sidenav-container class="full-height">
-        <md-sidenav #sidenav opened="true" mode="side" disableClose class="c-md-sidenav">
-            <md-nav-list>
-                <h3>SR관리</h3>
-                <md-list-item routerLinkActive="active"><a [routerLink]="['/regSrForm']">SR 등록</a></md-list-item>
-                <h3>변경관리</h3>
-                <md-list-item routerLinkActive="active"><a [routerLink]="['/srList']">SR 목록</a></md-list-item>
-                <md-list-item routerLinkActive="active"><a [routerLink]="['/subsrList']">SUBSR 목록</a></md-list-item>
-                <md-list-item routerLinkActive="active"><a [routerLink]="['/']">SR 등록</a></md-list-item>
-            </md-nav-list>
-        </md-sidenav>
-
-        <div class="scrolling-content">
+<app-nav-top></app-nav-top>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-md-3 col-xl-2 sidebar">
+            <app-nav-left></app-nav-left>
+        </div>
+        <div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5">
             <router-outlet></router-outlet>
         </div>
-    </md-sidenav-container>
+    </div>
 </div>
+<app-footer></app-footer>

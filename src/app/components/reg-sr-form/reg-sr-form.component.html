@@ -1,3 +1,19 @@
-<p>
-  reg-sr-form works!
-</p>
+<div class="container">
+    <form [formGroup]="formModel" (ngSubmit)="onSubmit()">
+        <div class="form-group row">
+            <label for="srTitle">SR 제목</label>
+            <input type="text" class="form-control" id="srTitle" aria-describedby="srTitle" placeholder="SR 제목" formControlName="srTitle">
+        </div>
+        <div class="form-group row">
+            <label>SR 분류</label>
+            <select>
+              <option>신규서비스개발</option>
+              <option>유지보수</option>
+              
+            </select>
+        </div>
+        <div class="form-group row">
+            <button type="submit" class="btn btn-primary">등록</button>
+        </div>
+    </form>
+</div>

@@ -1,7 +1,6 @@
 import { Component, OnDestroy } from '@angular/core';
 import { MemberService, Member } from './../../services/member.service';
 import { Observable } from 'rxjs/Rx';
-import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   selector: 'app-nav-left',

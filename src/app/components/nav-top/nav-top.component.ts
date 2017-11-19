@@ -36,6 +36,8 @@ export class NavTopComponent {
       this.formModel.setValue({
         'sabun': ''
       });
+    } else {
+      alert('사번을 입력해주세요.');
     }
   }
 

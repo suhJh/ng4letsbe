@@ -1,5 +1,6 @@
 <app-nav-top></app-nav-top>
-<div class="container-fluid">
+<!-- 로그인시 페이지-->
+<div class="container-fluid" [hidden]="!(isLogin | async)">
     <div class="row">
         <div class="col-12 col-md-3 col-xl-2 sidebar">
             <app-nav-left></app-nav-left>
@@ -7,6 +8,18 @@
         <div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5">
             <router-outlet></router-outlet>
         </div>
+    </div>
+</div>
+<!-- 비로그인시 페이지 -->
+<div class="jumbotron jumbotron-fluid" [hidden]="(isLogin | async)">
+    <div class="container">
+        <h1 class="display-3">NEW ITSM</h1>
+        <p class="lead">Angular로 만들어진 ITSM앱입니다.</p>
+        <hr class="my-4">
+        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        </p>
     </div>
 </div>
 <app-footer></app-footer>
